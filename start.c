@@ -1,5 +1,7 @@
 #include "monty.h"
 
+stack_t *head = NULL;
+
 /**
   * create_node - Create a new node.
   *
@@ -10,7 +12,6 @@
 
 stack_t *create_node(int n)
 {
-	stack_t *head = NULL;
 	stack_t *node;
 
 	node = malloc(sizeof(stack_t));
@@ -30,7 +31,6 @@ stack_t *create_node(int n)
 
 void free_nodes(void)
 {
-	stack_t *head = NULL;
 	stack_t *tmp_node;
 
 	if (head == NULL)
@@ -56,7 +56,6 @@ void free_nodes(void)
 
 void add_to_queue(stack_t **new_node, __attribute__((unused))unsigned int ln)
 {
-	stack_t *head = NULL;
 	stack_t *tmp_node;
 
 	if (new_node == NULL || *new_node == NULL)
